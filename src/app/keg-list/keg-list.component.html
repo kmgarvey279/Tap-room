@@ -9,7 +9,9 @@
 </select><br>
 
 <ul>
-  <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | alcoholcontent:filterByAlcoholContent">{{currentKeg.brand}} {{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.alcoholContent}}%</li>
+  <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | alcoholcontent:filterByAlcoholContent">{{currentKeg.brand}} {{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.alcoholContent}}%
+
+  </li>
 </ul>
 <img src="assets/img/beers.jpg">
 <h5>Style Key:</h5>

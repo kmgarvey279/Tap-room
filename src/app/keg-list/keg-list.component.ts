@@ -38,7 +38,13 @@ export class KegListComponent {
   }
 
   saleButtonClicked(clickedKeg: Keg) {
-    clicked.sale = true;
+    if (clickedKeg.sale == true) {
+      clickedKeg.sale = false;
+      clickedKeg.price += 2;
+    } else {
+      clickedKeg.sale = true;
+      clickedKeg.price -= 2;
+    }
   }
 
   styleColor(currentKeg) {

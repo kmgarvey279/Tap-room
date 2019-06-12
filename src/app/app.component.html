@@ -1,10 +1,6 @@
-<h1>Welcome, {{userName}}!</h1>
-<form>
-  <imput [(ngModel)]="userName" type="text" name="user">
-</form>
+<h1>Tap Room</h1>
 
-<h1>Recipe Box</h1>
 <h3>{{currentFocus}}</h3>
-<app-recipe-list [childRecipeList]="masterRecipeList" (clickSender)="editRecipe($event)"></app-recipe-list>
-<app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishedEditing()"></app-edit-recipe>
-<app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+<app-Keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-Keg-list>
+<app-edit-Keg [childSelectedKeg]="selectedKeg" (clickedDone)="finishedEditing()"></app-edit-Keg>
+<app-new-Keg (sendKeg)="addKeg($event)"></app-new-Keg>

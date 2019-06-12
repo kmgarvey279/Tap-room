@@ -1,22 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
-import { NewRecipeComponent } from './new-recipe/new-recipe.component';
-import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { EditKegComponent } from './edit-Keg/edit-Keg.component';
+import { NewKegComponent } from './new-Keg/new-Keg.component';
+import { KegListComponent } from './Keg-list/Keg-list.component';
+import { AlcoholContentPipe } from './alcoholcontent.pipe';
+import { RemainingPintsPipe } from './remainingpints.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditRecipeComponent,
-    NewRecipeComponent,
-    RecipeListComponent
+    EditKegComponent,
+    NewKegComponent,
+    KegListComponent,
+    AlcoholContentPipe,
+    RemainingPintsPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

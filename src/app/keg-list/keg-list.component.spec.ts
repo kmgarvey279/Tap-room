@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditRecipeComponent } from './edit-recipe.component';
+import { KegListComponent } from './Keg-list.component';
 
-describe('EditRecipeComponent', () => {
-  let component: EditRecipeComponent;
-  let fixture: ComponentFixture<EditRecipeComponent>;
+describe('KegListComponent', () => {
+  let component: KegListComponent;
+  let fixture: ComponentFixture<KegListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditRecipeComponent ]
+      declarations: [ KegListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditRecipeComponent);
+    fixture = TestBed.createComponent(KegListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

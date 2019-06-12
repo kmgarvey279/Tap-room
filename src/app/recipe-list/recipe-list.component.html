@@ -1,6 +1,0 @@
-<select (change)="onChange($event.target.value)">
-  <option value="allRecipies">All Recipies</option>
-</select>
-
-<ul>
-  <li [class]="currentRecipe" *ngFor="let currentRecipe of childRecipeList">{{currentRecipe.name}} {{currentRecipe.instructions}} {{currentRecipe.ingredients}}

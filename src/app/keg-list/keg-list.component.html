@@ -1,0 +1,39 @@
+<img src="assets/img/taps.jpg">
+
+<h5>Beers On Tap</h5>
+<select (change)="onChange($event.target.value)">
+  <option value="allKegs" selected="selected">All Kegs</option>
+  <option value="highAlcoholContent">High (> 7.0) Alcohol Content</option>
+  <option value="midAlcoholContent">Mid (4.0 - 6.9) Alcohol Content</option>
+  <option value="lowAlcoholContent">Low (< 4.0) Alcohol Content</option>
+</select><br>
+
+<ul>
+  <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | alcoholcontent:filterByAlcoholContent">{{currentKeg.brand}} {{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.alcoholContent}}%</li>
+</ul>
+<img src="assets/img/beers.jpg">
+<h5>Style Key:</h5>
+<p> <span class="text-success">IPA </span><span class="text-warning">Sour </span><span class="text-danger">Lager </span><span class="text-info">Porter</span>
+
+<div class="card">
+<div class="card-body-employee">
+<h5 class="card-title">Employee Functions</h5>
+<ul>
+  <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList">{{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.remainingPints}}/124
+  <button (click)="sellButtonClicked(currentKeg)">Sell Pint</button>
+  <button (click)="sellGrowlerClicked(currentKeg)">Sell Growler (Regular)</button>
+  <button (click)="sellLargeGrowlerClicked(currentKeg)">Sell Growler (Large)</button>
+  <button (click)="replaceButtonClicked(currentKeg)">Replace Keg</button>
+  <button (click)="editButtonClicked(currentKeg)">Edit Keg Info</button>
+  <button (click)="saleButtonClicked(currentKeg)">Apply/Remove Discount</button>
+  </li>
+</ul>
+
+<div class="replace">
+  <h5>These kegs will need to be replaced soon!</h5>
+  <ul>
+  <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | remainingpints:filterByRemainingPints">{{currentKeg.name}} {{currentKeg.remainingPints}}/124
+  </ul>
+</div>
+</div>
+</div>

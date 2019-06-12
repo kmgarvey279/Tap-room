@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Recipe } from './models/recipe.model';
+import { Keg } from './models/keg.model';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +7,23 @@ import { Recipe } from './models/recipe.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentFocus: string = "Recipe List";
-  selectedRecipe = null;
+  currentFocus: string = "";
+  selectedKeg = null;
 
-  masterRecipeList: Task[] = [
-    new Recipe('Chocolate Cake', 'instructions', 'ingredients'),
-    new Recipe('Banana Bread', 'instructions', 'ingredients')
+  masterKegList: Keg[] = [
+    new Keg("Summer Haze", "Darkside Brewing", 'ipa', 4.00, 3.4),
+    new Keg("Tornato", "Riverfall Brewing", 'sour', 5.00, 5.1)
   ];
 
-  addRecipe(newRecipe: Recipe) {
-    this.masterRecipeList.push(newRecipe);
+  addKeg(newKeg: Keg) {
+    this.masterKegList.push(newKeg);
   }
 
-  editRecipe(clickedRecipe) {
-    this.selectedRecipe = clickedRecipe;
+  editKeg(clickedKeg) {
+    this.selectedKeg = clickedKeg;
   }
 
   finishedEditing() {
-    this.selectedRecipe = null;
+    this.selectedKeg = null;
   }
 }

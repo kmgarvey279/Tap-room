@@ -11,6 +11,7 @@ export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
   filterByAlcoholContent: string = "allKegs";
+  filterByStyle: string = "displayNone";
   filterByRemainingPints: string = "kegsToReplace";
 
   sellButtonClicked(clickedKeg: Keg) {
@@ -33,8 +34,12 @@ export class KegListComponent {
     this.clickSender.emit(kegToEdit);
   }
 
-  onChange(optionFromMenue) {
-    this.filterByAlcoholContent = optionFromMenue;
+  onAlcoholContentChange(optionFromMenu) {
+    this.filterByAlcoholContent = optionFromMenu;
+  }
+
+  onStyleChange(optionFromMenu) {
+    this.filterByStyle = optionFromMenu;
   }
 
   saleButtonClicked(clickedKeg: Keg) {
@@ -47,13 +52,33 @@ export class KegListComponent {
     }
   }
 
+  happyHourStartButtonClicked() {
+    for (let i = 0; i < this.childKegList.length; i++) {
+      if (this.childKegList[i].sale == false) {
+        this.childKegList[i].sale = true;
+        this.childKegList[i].price -= 2;
+      }
+    }
+  }
+
+  happyHourEndButtonClicked() {
+    for (let i = 0; i < this.childKegList.length; i++) {
+      this.childKegList[i].sale = false;
+      this.childKegList[i].price += 2;
+    }
+  }
+
   styleColor(currentKeg) {
-    if (currentKeg.style == "ipa") {
+    if (currentKeg.remainingPints == 0) {
+      return "bg-dark";
+    } else if (currentKeg.sale == true) {
+      return "bg-warning";
+    } else if (currentKeg.style == "ipa") {
       return "bg-success";
     } else if (currentKeg.style == "lager") {
       return "bg-danger";
     } else if (currentKeg.style == "sour") {
-      return "bg-warning";
+      return "bg-primary";
     } else {
       return "bg-info";
     }

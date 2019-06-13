@@ -8,7 +8,7 @@ import { NewKegComponent } from './new-Keg/new-Keg.component';
 import { KegListComponent } from './Keg-list/Keg-list.component';
 import { AlcoholContentPipe } from './alcoholcontent.pipe';
 import { RemainingPintsPipe } from './remainingpints.pipe';
-
+import { StylePipe } from './style.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { RemainingPintsPipe } from './remainingpints.pipe';
     NewKegComponent,
     KegListComponent,
     AlcoholContentPipe,
-    RemainingPintsPipe
+    RemainingPintsPipe,
+    StylePipe
   ],
   imports: [
     BrowserModule,

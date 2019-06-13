@@ -1,7 +1,32 @@
-.card-body-employee {
-  background-color: brown;
+.card-our-story {
+  background-color: black;
+  float:left;
+  margin-bottom: 20px;
+  margin-top: 1-px;
+}
+
+.card-title-employee {
+  color: black;
+}
+
+.card-key {
+  margin-top: 10px;
+  background-color: black;
+}
+
+.card {
+  background-color: SlateGray;
+}
+
+
+p {
+  color: gray;
 }
 
 h5 {
-  color: red;
+  color: gray;
+}
+
+img {
+  text-align: center;
 }

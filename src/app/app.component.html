@@ -1,6 +1,8 @@
-
+<div class="card">
+<div class="card-body">
 <h1>Tap Room</h1>
-
+</div>
+</div>
 <h3>{{currentFocus}}</h3>
 <app-Keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-Keg-list>
 <app-edit-Keg [childSelectedKeg]="selectedKeg" (clickedDone)="finishedEditing()"></app-edit-Keg>

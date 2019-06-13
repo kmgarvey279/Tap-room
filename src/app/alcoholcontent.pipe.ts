@@ -24,7 +24,7 @@ export class AlcoholContentPipe implements PipeTransform {
         }
         return output;
     } else if (desiredAlcoholLevel === "highAlcoholContent") {
-      for (let i = 0; i < length; i++) {
+      for (let i = 0; i < input.length; i++) {
         if (input[i].alcoholContent >= 7.0) {
           output.push(input[i]);
         }

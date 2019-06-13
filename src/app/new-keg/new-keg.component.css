@@ -1,3 +1,7 @@
 .card-body {
-  background-color: brown;
+  background-color: SlateGray;
+}
+
+.card-title {
+  color: black;
 }

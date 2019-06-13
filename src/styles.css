@@ -1,4 +1,20 @@
 body {
   background-image: url("/assets/img/Wood-Texture.jpg");
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width:auto;
+  height:auto;
+}
+
+button {
+  background-color: steelblue;
+}
+
+input {
+  background-color: LightSteelBlue;
+}
+
+select {
+  background-color: LightSteelBlue;
 }

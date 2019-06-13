@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Add New Keg</h5>
-    <label>Enter Keg Name:</label>
+    <label>Name:</label>
     <input #newName>
-    <label>Enter Keg Brand:</label>
+    <label>Brand:</label>
     <input #newBrand>
     <label>Enter Keg Style:</label>
     <select #newStyle>
@@ -13,9 +13,9 @@
       <option [value]="sour"> Sour </option>
       <option [value]="porter"> Porter </option>
     </select>
-    <label>Enter Price (Per Pint):</label>
+    <label>Price (Per Pint):</label>
     <input #newPrice>
-    <label>Enter Alcohol Content:</label>
+    <label>Alcohol Content:</label>
     <input #newAlcoholContent>
     <button (click)="submitForm(newName.value, newBrand.value, newStyle.value, newPrice.value, newAlcoholContent.value); newName.value=''; newBrand.value=''; newPrice.value=''; newAlcoholContent.value='';">Add</button>
   </div>

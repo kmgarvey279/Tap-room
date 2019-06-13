@@ -1,0 +1,48 @@
+[debug] [2019-06-13T21:30:13.525Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T21:30:13.527Z] Command:       /usr/local/bin/node /usr/local/bin/firebase open
+[debug] [2019-06-13T21:30:13.527Z] CLI Version:   7.0.0
+[debug] [2019-06-13T21:30:13.527Z] Platform:      darwin
+[debug] [2019-06-13T21:30:13.527Z] Node Version:  v8.12.0
+[debug] [2019-06-13T21:30:13.527Z] Time:          Thu Jun 13 2019 14:30:13 GMT-0700 (PDT)
+[debug] [2019-06-13T21:30:13.527Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-13T21:30:13.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-13T21:30:13.537Z] > authorizing via signed-in user
+[debug] [2019-06-13T21:30:13.537Z] [iam] checking project tap-room-63b8f for permissions ["firebase.projects.get"]
+[debug] [2019-06-13T21:30:13.539Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tap-room-63b8f:testIamPermissions  
+
+[debug] [2019-06-13T21:30:13.721Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T21:30:13.723Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tap-room-63b8f  
+ 
+[debug] [2019-06-13T21:30:13.898Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T21:30:14.007Z] TypeError: prompt.once is not a function
+    at Command._action (/usr/local/lib/node_modules/firebase-tools/lib/commands/open.js:69:14)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:163:37
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:229:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-13T21:31:01.235Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T21:31:01.237Z] Command:       /usr/local/bin/node /usr/local/bin/firebase open
+[debug] [2019-06-13T21:31:01.237Z] CLI Version:   7.0.0
+[debug] [2019-06-13T21:31:01.237Z] Platform:      darwin
+[debug] [2019-06-13T21:31:01.237Z] Node Version:  v8.12.0
+[debug] [2019-06-13T21:31:01.237Z] Time:          Thu Jun 13 2019 14:31:01 GMT-0700 (PDT)
+[debug] [2019-06-13T21:31:01.237Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-13T21:31:01.245Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-13T21:31:01.245Z] > authorizing via signed-in user
+[debug] [2019-06-13T21:31:01.245Z] [iam] checking project tap-room-63b8f for permissions ["firebase.projects.get"]
+[debug] [2019-06-13T21:31:01.247Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tap-room-63b8f:testIamPermissions  
+
+[debug] [2019-06-13T21:31:01.860Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T21:31:01.862Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tap-room-63b8f  
+ 
+[debug] [2019-06-13T21:31:02.064Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T21:31:02.152Z] TypeError: prompt.once is not a function
+    at Command._action (/usr/local/lib/node_modules/firebase-tools/lib/commands/open.js:69:14)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:163:37
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:229:7)
+[error] 
+[error] Error: An unexpected error has occurred.

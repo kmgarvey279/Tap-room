@@ -15,15 +15,21 @@ export class KegListComponent {
   filterByRemainingPints: string = "kegsToReplace";
 
   sellButtonClicked(clickedKeg: Keg) {
-    clickedKeg.remainingPints--;
+    if (clickedKeg.remainingPints > 0) {
+      clickedKeg.remainingPints--;
+    }
   }
 
   sellGrowlerClicked(clickedKeg: Keg) {
-    clickedKeg.remainingPints -= 2;
+    if (clickedKeg.remainingPints > 1) {
+      clickedKeg.remainingPints -= 2;
+    }
   }
 
   sellLargeGrowlerClicked(clickedKeg: Keg) {
-    clickedKeg.remainingPints -= 4;
+    if (clickedKeg.remainingPints > 3) {
+      clickedKeg.remainingPints -= 4;
+    }
   }
 
   replaceButtonClicked(clickedKeg: Keg) {
@@ -63,8 +69,10 @@ export class KegListComponent {
 
   happyHourEndButtonClicked() {
     for (let i = 0; i < this.childKegList.length; i++) {
-      this.childKegList[i].sale = false;
-      this.childKegList[i].price += 2;
+      if (this.childKegList[i].sale == true) {
+        this.childKegList[i].sale = false;
+        this.childKegList[i].price += 2;
+      }
     }
   }
 
@@ -83,4 +91,5 @@ export class KegListComponent {
       return "bg-info";
     }
   }
+
 }

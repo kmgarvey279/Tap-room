@@ -26,7 +26,7 @@
               <option value="lowAlcoholContent">Low (< 4.0) Alcohol Content</option>
             </select><br>
             <ul>
-              <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | alcoholcontent:filterByAlcoholContent">{{currentKeg.brand}} {{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.alcoholContent}}%
+              <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | alcoholcontent:filterByAlcoholContent">{{currentKeg.brand}}: {{currentKeg.name}} - ${{currentKeg.price}} AVB:{{currentKeg.alcoholContent}}%
               </li>
             </ul>
             <select (change)="onStyleChange($event.target.value)">
@@ -37,7 +37,7 @@
               <option value="lager">Lagers</option>
             </select><br>
             <ul>
-              <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | style:filterByStyle">{{currentKeg.brand}} {{currentKeg.name}} ${{currentKeg.price}} {{currentKeg.alcoholContent}}%
+              <li [class]="styleColor(currentKeg)" *ngFor="let currentKeg of childKegList | style:filterByStyle">{{currentKeg.brand}}: {{currentKeg.name}} - ${{currentKeg.price}} AVB:{{currentKeg.alcoholContent}}%
               </li>
             </ul>
         </div>

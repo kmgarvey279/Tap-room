@@ -1,13 +1,13 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Edit Keg Info</h5>
-  <label>Enter Keg Name:</label>
+  <label>Name:</label>
   <input [(ngModel)]="childSelectedKeg.name">
 
-  <label>Enter Keg Brand:</label>
+  <label>Brand:</label>
   <input [(ngModel)]="childSelectedKeg.brand">
 
-  <label>Enter Keg Style:</label>
+  <label>Style:</label>
   <select #newStyle>
     <option [value]="" selected="selected"></option>
     <option [value]="ipa"> IPA </option>
@@ -19,7 +19,7 @@
   <label>Enter Price (Per Pint):</label>
   <input [(ngModel)]="childSelectedKeg.price">
 
-  <label>Enter Keg Alcohol Content</label>
+  <label>Alcohol Content</label>
   <input [(ngModel)]="childSelectedKeg.alcoholContent">
 
   <button (click)="finishedEditing()">Done</button>

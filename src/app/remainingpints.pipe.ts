@@ -14,5 +14,6 @@ export class RemainingPintsPipe implements PipeTransform {
         output.push(input[i]);
       }
     }
+    return output;
   }
 }

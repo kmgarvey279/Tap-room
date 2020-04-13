@@ -5,7 +5,7 @@
     <input #newName>
     <label>Brand:</label>
     <input #newBrand>
-    <label>Enter Keg Style:</label>
+    <label>Style:</label>
     <select #newStyle>
       <option [value]="" selected="selected"></option>
       <option [value]="ipa"> IPA </option>
@@ -13,9 +13,10 @@
       <option [value]="sour"> Sour </option>
       <option [value]="porter"> Porter </option>
     </select>
-    <label>Price (Per Pint):</label>
+    <br>
+    <label>Price:</label>
     <input #newPrice>
-    <label>Alcohol Content:</label>
+    <label>AVB:</label>
     <input #newAlcoholContent>
     <button (click)="submitForm(newName.value, newBrand.value, newStyle.value, newPrice.value, newAlcoholContent.value); newName.value=''; newBrand.value=''; newPrice.value=''; newAlcoholContent.value='';">Add</button>
   </div>

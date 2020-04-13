@@ -3,10 +3,8 @@
 <h5 class="card-title">Edit Keg Info</h5>
   <label>Name:</label>
   <input [(ngModel)]="childSelectedKeg.name">
-
   <label>Brand:</label>
   <input [(ngModel)]="childSelectedKeg.brand">
-
   <label>Style:</label>
   <select #newStyle>
     <option [value]="" selected="selected"></option>
@@ -15,11 +13,10 @@
     <option [value]="sour"> Sour </option>
     <option [value]="porter"> Porter </option>
   </select>
-
-  <label>Enter Price (Per Pint):</label>
+  <br>
+  <label>Price:</label>
   <input [(ngModel)]="childSelectedKeg.price">
-
-  <label>Alcohol Content</label>
+  <label>AVB:</label>
   <input [(ngModel)]="childSelectedKeg.alcoholContent">
 
   <button (click)="finishedEditing()">Done</button>

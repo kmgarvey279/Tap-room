@@ -37,6 +37,8 @@ export class StylePipe implements PipeTransform {
         }
       }
       return output;
+    } else {
+      return input;
     }
   }
 }
